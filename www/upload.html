@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<title>Upload</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/upload_style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	
+</head>
+
+
+<body id="upload-img">
+
+	<header>
+		<div>
+			<button class="button">  
+				<a href="index.html" class="button-link" title="Back to homepage"> ArtSpace</a>
+			</button>
+		</div>
+		<div class="middle-section">
+			<a href="/gallery.py">
+				<button  class="middle-button">
+					Gallery
+				</button>
+			</a>
+			<a href="get_started.html">
+				<button  class="middle-button">
+					Community
+				</button>
+			</a>
+			<a href="get_started.html">
+				<button  class="middle-button">
+					Markets
+				</button>
+			</a>
+			<a href="/test.py">
+				<button  class="middle-button">
+					News
+				</button>
+			</a>
+			<a href="get_started.html">
+				<button  class="middle-button">
+					More
+				</button>
+			</a>
+		</div>
+		<div class="right-side-header">
+			
+			<a href="upload.html">
+				<button  class="profile-button">
+					<img src="img/upload_symbol.svg" alt="upload symbol">
+				</button>
+			</a>
+	
+			<a href="get_started.html">
+				<button  class="profile-button">
+					<img src="img/profile_symbol.svg" alt="profile symbol">
+				</button>
+			</a>
+	
+			<a href="upload.html" class="get-started-button-link">
+				<button class="get-started-button">
+					Get Started
+				</button>
+			</a>
+		</div>
+	</header>
+
+	<main>
+	
+		<form action="/upload.php" method="POST" enctype="multipart/form-data" class="grid">
+
+				<h1 id="grid-header">Join Our Awesome Community</h1>
+			
+				
+					<p class="form-text" id="upload-intro">Upload your artwork and share your creativity with the world.<br>Connect with fellow artists, inspire others, and be inspired in return.</p>
+					<h3>Submit your artwork now!</h3>
+
+					<label class="form-text" id="form-name"  for="name">Please enter the artist's name: </label>
+					<input class="input-field" type="text" id="artist" name="name" placeholder="The artist's name"><br><br>
+		
+					<label class="form-text" id="form-title" for="title">Please enter the artwork's title: </label>
+					<input class="input-field" type="text" id="artwork" name="title" placeholder="The artwork's title"><br><br>
+
+					
+					<label class="form-text" id="form-artwork" for="file-input" >Please upload your artwork:</label>
+					<input type="file" id="file-input" class="input-field" name="uploaded-file" placeholder="Choose file" accept="image/*">
+		
+					<input class="submit-btn" type="submit" value="Submit">
+    				
+					<!-- We only need one submit button	<button type="submit" class="submit-btn">Upload File</button> -->
+
+
+		</form>
+			
+	</main>
+
+	<footer>
+		<p>&copy; 2024 ArtSpace. All rights reserved.</p>
+		<p>
+			<a href="#">Privacy Policy</a> |
+			<a href="#">Terms of Service</a> |
+			<a href="#">Contact Us</a>
+		</p>
+	</footer>
+
+</body>
+</html>

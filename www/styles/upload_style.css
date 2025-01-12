@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+  }
+
+h1 {
+	font-size: 45px;
+}
+
+
+#upload-img{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/color_background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	font-family: Poppins, Arial, sans-serif;
+}
+
+
+.grid {
+	margin: 10% 20%;
+	padding: 5% 10%;
+	overflow: hidden;
+	display: grid;
+	grid-template-areas: "grid-header grid-header"
+						"upload-intro upload-intro"
+						"form-header form-header"
+						"form-name artist"
+						"form-title artwork"
+						"form-artwork file-input"
+						"submit-btn submit-btn";
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: repeat(7, minmax(45px, auto));
+	column-gap: 10px;
+	align-items: center;
+	background: rgba(70, 3, 97, 0.301);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	font-family: Roboto, Arial, sans-serif;
+}
+
+
+#grid-header{
+	grid-area: grid-header;
+	justify-self: center;
+}
+
+#upload-intro {
+	grid-area: upload-intro;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+
+.grid h3 {
+	grid-area: form-header;
+}
+
+
+
+
+.form-text {
+	font-size: 20px;
+	padding: 0 5px;
+}
+
+#form-name {
+	grid-area: form-name;
+}
+
+#form-title {
+	grid-area: form-title;
+}
+
+#form-artwork {
+	grid-area: form-artwork;
+}
+
+#form-link-btn {
+	grid-area: form-name / form-name / artist /  artist;
+	justify-self: center;
+}
+
+.input-field {
+	font-size: 20px;
+	border-radius: 5px;
+	align-self: center;
+}
+
+
+#artist {
+	grid-area: artist;
+}
+
+#artwork {
+	grid-area: artwork;
+}
+
+#file-input {
+	grid-area: file-input;
+}
+
+
+
+.custom-file-label {
+	margin-top: 90px;
+	margin-right: 90px;
+	font-weight: bold;
+	color: rgb(155, 89, 182);
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 12px;
+	background: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	
+}
+
+
+.custom-file-label:active {
+	transform: scale(0.95);
+}
+
+.custom-file-label:hover {
+	background: linear-gradient(to right, rgb(23, 105, 159), rgb(155, 89, 182));
+}
+
+.submit-btn {
+	margin-top: 50px;
+	margin-left: 7%;
+	margin-right: 7%;
+	font-weight: bold;
+	color: #F8F8F8;
+	padding: 10px 20px;
+	font-size: 30px;
+	border-radius: 12px;
+	background: linear-gradient(to right, rgb(52, 152, 219), rgb(155, 89, 182));
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	text-decoration: none;
+	grid-area: submit-btn;
+}
+
+.submit-btn:active {
+	transform: scale(0.95);
+}
+
+.submit-btn:hover {
+	background: linear-gradient(to right, rgb(23, 105, 159), rgb(155, 89, 182));
+}
+
+input:active,
+input:focus {
+	border: 5px solid linear-gradient(to right, rgb(23, 105, 159), rgb(155, 89, 182));
+}
+

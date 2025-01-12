@@ -1,0 +1,91 @@
+server {
+	
+	
+	location /.php {
+		root 	./www/cgi-bin ;
+		# index upload.html	;
+		allow_methods GET POST;
+	}
+	
+	server_name rpodack.com; 
+
+	listen 8080 ;
+	listen 4444 ;
+
+	allow_methods  GET POST DELETE; 
+	autoindex off;
+
+
+	root	./www ;
+	# root /home/robin;
+	client_max_body_size		8388608;
+	host						0.0.0.0;
+
+	# error_page 404		/error_pages/413.html;
+
+
+	# sets file to look for
+	index index.html;
+
+	location /.py {
+		root ./www/cgi-bin ;
+		allow_methods GET POST;
+	}
+
+	location /conf_test/ {
+		autoindex on;
+		index notindex.html;
+	}
+
+	location /img/ {
+		autoindex on;
+		#return /gallery.py;
+	}
+
+	#return /conf_test;
+	#return https://42berlin.de/;
+
+	#location /upload.html {
+	#	autoindex off;
+	#	return /img/;
+	#}
+}
+
+server {
+	listen 4005;
+	
+	server_name mwurch;
+
+	root ./www;
+	index index.html;
+
+	error_page 404	/error_pages/404.html
+
+	# location /yt.html {
+	# 	root /home/robin/html-YT;
+	# 	# try_files $uri $uri/ =404;
+	# }
+
+}
+
+server {
+	listen 4205;
+	listen 9950;
+	listen 6664;
+
+	server_name rpodack;
+
+	root ./www;
+	index index.html;
+
+	location /.py {
+		root ./www/cgi-bin ;
+		allow_methods GET POST;
+	}
+
+	error_page 404	/error_pages/404_alternative.html
+
+	# location / {
+	# 	# try_files $uri $uri/ =404;
+	# }
+}
